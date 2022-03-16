@@ -592,13 +592,11 @@
     }
 
     .anim_box_l {
-        padding: 10px;
         opacity: 0;
         transform: translateX(-60px);
         transition: 1s ease;
     }
     .anim_box_r {
-        padding: 10px;
         opacity: 0;
         transform: translateX(60px);
         transition: 1s ease;
