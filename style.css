@@ -647,6 +647,20 @@
                 padding-bottom: 50px;
             }
 
+            #japaneseMS .my-parts{
+                transform: skewX(10deg);
+                width: 100%;
+                height: 100%;
+                margin-top: 20%;
+                margin-bottom: 10%;
+                }
+            #japaneseMS .my-parts span {
+                display: inline-block;
+                transform: skewX(-10deg);
+                padding-top: 50px;
+                padding-bottom: 50px;
+                }
+
             #japaneseMS h3{
                 margin: auto;
                 width: 90%;
@@ -677,7 +691,9 @@
             #aboutSGT .my-parts{
                 transform: skewX(5deg);
                 width: 100%;
-                height: 80%;
+                height: 100%;
+                margin-top: 10%;
+                margin-bottom: 10%;
             }
             #aboutSGT .my-parts span{
                 display: inline-block;
@@ -708,8 +724,9 @@
             #attraction .my-parts{
                 transform: skewX(5deg);
                 width: 80%;
-                height: 5%;
-                padding-bottom: 20px;
+                height: 100%;
+                margin-top: 20%;
+                margin-bottom: 20%;
             }
             #attraction .my-parts span{
                 display: inline-block;
@@ -732,13 +749,14 @@
             .cl_dif .my-parts{
                 transform: skewX(5deg);
                 width: 80%;
-                height: 20%;
+                height: 100%;
+                margin-top: 30%;
+                margin-bottom: 20%;
             }
             .cl_dif .my-parts span{
                 padding: 0;
                 display: inline-block;
                 transform: skewX(-5deg);
-                padding-top: 50px;
             }
             .cl_dif h3{
                 font-size: 36px;
@@ -827,7 +845,8 @@
                 transform: skewX(10deg);
                 background: #000;
                 width: 100%;
-                height: 10%;
+                height: 100%;
+                margin: 20% 0;
             }
             #fun .my-parts span{
                 color: #fff;
@@ -844,7 +863,7 @@
                 font-size: 36px;
             }
             #fun h5{
-                padding-top: 40px;
+                padding-top: 10px;
                 padding-left: 10%;
             }
             #fun p{
@@ -864,6 +883,7 @@
                 padding: 0;
                 width: 80%;
                 margin: auto;
+                padding-bottom: 50px;
             }
 
             #media .my-parts{
@@ -945,7 +965,7 @@
             #topic h3{
                 color: #000;
                 -webkit-text-stroke: 2px #fff;
-                padding-left: 10%;
+                padding-left: 30%;
                 font-size: 36px;
             }
             #topic h5{
