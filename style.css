@@ -3,6 +3,7 @@
     margin: 0;
     list-style: none;
     text-decoration: none;
+    max-width: 100%;
 }
 
 @font-face {
@@ -34,7 +35,7 @@
     transform: translate(-50%, -50%);
     width: 80%;
     height: 300px;
-    background-color: #dfdddd;
+    background-color: #fff;
     border-radius: 5px;
     z-index: 11;
     overflow-y: auto;
@@ -143,6 +144,7 @@
 header{
     position: fixed;
     width: 100%;
+    z-index: 10;
 }
 
 ul{
@@ -165,7 +167,7 @@ li a{
 
 .top{
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     display: table;
     background-position: right center;
     background-size: cover;
@@ -184,27 +186,46 @@ li a{
     -webkit-text-stroke: 3px #FFF;
 }
 
+.my-parts {
+	display: inline-block;
+	transform: skewX(-35deg);
+	background: #fff;
+	/* padding: .8em 15em; */
+    opacity: 0.7;
+    width: 50%;
+    height: 70%;
+}
+
+.my-parts span {
+	display: inline-block;
+	transform: skewX(35deg);
+}
+
 .sections{
     margin-top: 20px;
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     display: table;
+}
+
+.sections h3{
+    font-family: "font-bold";
+    font-size: 64px;
 }
 
 #japaneseMS{
     background-image: url(images/bgms_img.png);
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center bottom;
 }
 
 #japaneseMS h3{
     color: #000;
-    -webkit-text-stroke: 2px #FFF;
 }
 
 #japaneseMS p{
     color: #000;
-    -webkit-text-stroke: 0.8px #FFF;
 }
 
 #aboutSGT{
@@ -214,11 +235,40 @@ li a{
     background-position: center bottom;
 }
 
+#aboutSGT .my-parts{
+    transform: skewX(-20deg);
+}
+
+#aboutSGT .my-parts span{
+	transform: skewX(20deg);
+}
+
+#aboutSGT p{
+    width: 70%;
+}
+
 #attraction{
     background-image: url(images/attraction_img.JPG);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center bottom;
+}
+
+#attraction .my-parts{
+    margin-top: 10%;
+    transform: skewX(-20deg);
+    width: 50%;
+    height: 50%;
+    margin-left: 10%;
+}
+
+#attraction .my-parts span{
+    margin-top: 10%;
+    transform: skewX(20deg);
+}
+
+#attraction h3{
+    padding-left: 10%;
 }
 
 #gt500{
@@ -228,6 +278,11 @@ li a{
     background-repeat: no-repeat;
     background-position: center bottom;
 }
+
+#gt500 .my-parts{
+    margin-top: 3%;
+}
+
 #gt500 p{
     color: #fff;
     -webkit-text-stroke: 0.8px #000;
@@ -253,21 +308,62 @@ li a{
 }
 
 .bg_group{
+    background-image: url(images/box_2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
     text-align: left;
     display: table-cell;
     vertical-align: middle;
     width: 80vw;
     height: 60vh;
+    transform: skew(-15deg, -15deg);
+    transform: rotate(15,15);
 }
 
-.bg_group img{
+.my-parts {
+	display: inline-block;
+	transform: skewX(-35deg);
+	background: #fff;
+	/* padding: .8em 15em; */
+    opacity: 0.7;
+    width: 50%;
+    height: 70%;
+}
+
+.my-parts span {
+	display: inline-block;
+	transform: skewX(35deg);
+}
+
+.my-parts h3{
+    opacity: 1;
+    padding-left: 20%;
+    width: 100%;
+}
+.my-parts p{
+    width: 90%;
+    padding-top: 10%;
+    padding-left: 20%;
+    opacity: 1;
+}
+
+
+
+.content_box{
+    padding-left: 10%;
+    padding-top: 10%;
+}
+
+/* .bg_group img{
+    width: 95vw;
+    height: 95vh;
     opacity: 0.7;
     float: left;
     position: relative;
-}
+} */
 
 .content_group{
-    position: absolute;
+    transform: skew(15deg, 15deg);
     }
 
 /* .box{
@@ -280,14 +376,12 @@ li a{
 .bg_group h2{
     font-size: 72px;
     font-family: "font-bold";
-    -webkit-text-stroke: 0.8px #000;
 }
 
 .bg_group h3{
     font-size: 64px;
     padding-bottom: 48px;
     font-family: "font-bold";
-    -webkit-text-stroke: 0.8px #000;
 }
 
 h4{
@@ -315,6 +409,15 @@ p{
     -webkit-text-stroke: 0.8px #000;
 }
 
+.cl_dif .my-parts{
+    padding-right: 10%;
+}
+
+.tire{
+    width: 100%;
+    height: 100%;
+}
+
 .tire h3{
     font-size: 64px;
     padding-bottom: 48px;
@@ -335,16 +438,20 @@ p{
 .tires_img{
     padding: 50px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 }
 
 .tires_img img{
+    width: 20%;
     margin: 20px;
 }
 
 .contents{
+    width: 90%;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     padding: 10px;
@@ -358,6 +465,10 @@ p{
     -webkit-text-stroke: 0.8px #000;
 }
 
+.contents img{
+    width: 30%;
+}
+
 #media h5{
     color: #000;
     text-decoration:underline;
@@ -367,10 +478,42 @@ p{
     color: #000;
 }
 
+#fun .my-parts{
+    background: #000;
+    color: #fff;
+}
+
+
+
+#media .my-parts{
+    background: #000;
+    color: #fff;
+}
+
+#more .my-parts{
+    background: #000;
+    color: #fff;
+    width: 50%;
+    height: 40%;
+}
+
+#topic .my-parts{
+    background: #000;
+    color: #fff;
+}
+
 .contents img{
     padding: 80px;
 }
 #more{
+    /* display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+    padding-top: 10px; */
+}
+.more_tile{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -447,4 +590,15 @@ p{
 .copyright p{
     font-size: 12px;
     text-align: center;
+}
+
+@media all and (max-width:480px) {
+    header{
+        display: none;
+    }
+
+    .my-parts{
+        width: 100%;
+        height: 5%;
+    }
 }
