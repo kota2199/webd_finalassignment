@@ -7,6 +7,8 @@
         <link rel="stylesheet" href="style.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <meta name="viewport" content="width=device-width,initial-scale=1">
+        <link rel=”icon” href=“images/favicon.ico”>
+        <link rel="shortcut icon" href="images/favicon.ico" type="image/vnd.microsoft.icon">
         <title>SUPER GT For Beginners</title>
     </head>
     <body>
@@ -148,12 +150,17 @@
     <!-- モーダルウィンドウ3 -->
         <div class="modal-window" data-id="modal3" id="modal">
         <button class="js-close button-close">閉じる</button>
-        <p class="m_title">おすすめの過去レース(公式Youtubeチャンネルで視聴可)</p>
+        <div class="For_PC">
+            <p class="m_title">おすすめの過去レース(公式Youtubeチャンネルで視聴可)</p>
+        </div>
+        <div class="For_mobile">
+            <p class="m_title">おすすめの過去レース(Youtube)</p>
+        </div>
         <div class="pr_box">
             <div class="pr_gr">
                 <a href="https://youtu.be/qhkL0Ss0Fzg" target="blank">1. 2020年 第8戦 in 富士スピードウェイ</a>
                 <p class="pr_content">
-                    2020シーズンのチャンピオンを決める最終戦。No.37 KeePer TOM’S GR Supraがチャンピオンをほぼ確実なものにしていたが、ファイナルラップの最後のコーナーで衝撃の結末が待っていた...
+                    2020シーズンのチャンピオンを決める最終戦。No.37 KeePer TOM'S GR Supraがチャンピオンをほぼ確実なものにしていたが、ファイナルラップの最後のコーナーで衝撃の結末が待っていた...
                 </p>
             </div>
             <div class="pr_gr">
@@ -180,12 +187,11 @@
         </p>
         </div>
 
-        <div class="anim_box_l">
-            <header>
+            <header class="navi">
                 <ul>
                     <li><a href="#top">Top</a></li>
                     <li><a href="#japaneseMS">日本のモータスポーツ</a></li>
-                    <li><a href="aboutSGT">SUPER GTとは</a></li>
+                    <li><a href="aboutSuperGT">SUPER GTとは</a></li>
                     <li><a href="#attraction">SUPER GTの魅力</a></li>
                     <li><a href="#fun">楽しみ方</a></li>
                     <li><a href="#media">メディア</a></li>
@@ -193,7 +199,26 @@
                     <li><a href="#topic">2022注目トピック</a></li>
                 </ul>
             </header>
-        
+            <header class="header">
+                <div class="header__inner">
+                  <div class="hamburger-menu">
+                    <span class="hamburger-menu__line"></span>
+                  </div>
+                  <nav class="nav-sp">
+                    <ul>
+                        <li><a href="#top" class="hamburger-menu-bt">Top</a></li>
+                        <li><a href="#japaneseMS" class="hamburger-menu-bt">日本のモータスポーツ</a></li>
+                        <li><a href="aboutSuperGT" class="hamburger-menu-bt">SUPER GTとは</a></li>
+                        <li><a href="#attraction" class="hamburger-menu-bt">SUPER GTの魅力</a></li>
+                        <li><a href="#fun" class="hamburger-menu-bt">楽しみ方</a></li>
+                        <li><a href="#media" class="hamburger-menu-bt">メディア</a></li>
+                        <li><a href="#more" class="hamburger-menu-bt">もっと楽しみたい人へ</a></li>
+                        <li><a href="#topic" class="hamburger-menu-bt">2022注目トピック</a></li>
+                    </ul>
+                  </nav>
+                </div>
+              </header>
+            <div class="anim_box_l">
             <div class="top" id="top">
                 <h1>初心者でもわかる<br>モータースポーツ<br>-SUPER GT編-</h1>
             </div>
@@ -221,7 +246,7 @@
         </div>
 
         <div class="anim_box_l">
-            <div class="sections" id="aboutSGT">
+            <div class="sections" id="aboutSuperGT">
                 <div class="content_box">
                     <div class="my-parts"><span><h3>日本トップカテゴリー「SUPER GT」とは</h3>
                         <p class="For_PC">
@@ -457,9 +482,14 @@
                 <div class="contents For_PC">
                     <img src="images/youtube.png" alt="" width="500px">
                     <div>
-                        <h5>
+                        <h5 class="For_PC">
                             <a href="https://www.youtube.com/c/SUPERGTOfficialChannel" target="_blank">
                             2.YouTube Official<br>チャンネル
+                            </a>
+                        </h5>
+                        <h5 class="For_mobile">
+                            <a href="https://www.youtube.com/c/SUPERGTOfficialChannel" target="_blank">
+                            2.YouTube<br>Official<br>チャンネル
                             </a>
                         </h5>
                         <p class="For_PC">
@@ -716,6 +746,35 @@
     });
     });
     });
+    $(function(){
+  // ハンバーガーメニュークリックイベント
+  $('.hamburger-menu').click(function(){
+    if($('.nav-sp').hasClass('open')){
+      // ナビゲーション非表示
+      $('.nav-sp').removeClass('open');
+      // ハンバーガーメニューを元に戻す
+      $(this).removeClass('open');
+    }else{
+      // ナビゲーションを表示
+      $('.nav-sp').addClass('open');
+      // ハンバーガーメニューを✖印に変更
+      $(this).addClass('open');
+    }
+  });
+  $('.hamburger-menu-bt').click(function(){
+    if($('.nav-sp').hasClass('open')){
+      // ナビゲーション非表示
+      $('.nav-sp').removeClass('open');
+      // ハンバーガーメニューを元に戻す
+      $('.hamburger-menu').removeClass('open');
+    }else{
+      // ナビゲーションを表示
+      $('.nav-sp').addClass('open');
+      // ハンバーガーメニューを✖印に変更
+      $('.hamburger-menu').addClass('open');
+    }
+  });
+});
         </script>
         </script>
     </div>

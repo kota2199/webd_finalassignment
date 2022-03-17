@@ -6,6 +6,106 @@
             max-width: 100%;
         }
 
+        .header{
+            display: none;
+        }
+
+        .header__inner{
+            display: flex;
+            flex-flow: row-reverse;
+            justify-content: space-between;
+            align-items: center;
+            height: 60px;
+            padding: 20px 20px;
+          }
+        .header ul{
+            display: flex;
+            flex-flow: column;
+            padding: 0;
+            margin: 0;
+        }
+          /* ハンバーガーメニュー */
+          .hamburger-menu{
+            display: flex;
+            align-items: center;
+            width: 32px;
+            height: 32px;
+            cursor: pointer;
+            z-index: 10;
+            padding-top: 20px;
+          }
+          
+          .hamburger-menu__line{
+            display: block;
+            width: 100%;
+            height: 4px;
+            border-radius: 4px;
+            background-color: #000;
+            position: relative;
+            transition: all 0.5s;
+          }
+          
+          .hamburger-menu__line::before,
+          .hamburger-menu__line::after{
+            content: '';
+            display: block;
+            width: 100%;
+            height: 4px;
+            border-radius: 4px;
+            background-color: #000;
+            position: absolute;
+            transition: all 0.5s;
+          }
+          
+          .hamburger-menu__line::before{
+            transform: translateY(-12px);
+          }
+          .hamburger-menu__line::after{
+            transform: translateY(12px);
+          }
+          
+          .hamburger-menu.open .hamburger-menu__line{
+            background-color: transparent;
+          }
+          .hamburger-menu.open .hamburger-menu__line::before{
+            transform: rotate(45deg);
+          }
+          .hamburger-menu.open .hamburger-menu__line::after{
+            transform: rotate(-45deg);
+          }
+          
+          /* ナビゲーション */
+          .nav-sp{
+            box-sizing: border-box;
+            position: absolute;
+            top: 0;
+            right: -300px;
+            width: 300px;
+            height: 100%;
+            padding: 60px 10px 0;
+            background-color:rgba(0, 0, 0, 0.8);
+            text-align: left;
+            transition: right 0.5s;
+          }
+          
+          .nav-sp.open{
+            right: 0;
+            width: 100%;
+            height: 100vh;
+          }
+          
+          .nav-sp a{
+            display: inline-block;
+            padding: 5px 0;
+            font-size: 24px;
+            color: #fff;
+          }
+          .nav-sp a:link, a:visited, a:hover, a:active{
+              color: #fff;
+          }
+          
+          
+          
         .For_mobile{
             display: none;
         }
@@ -124,6 +224,13 @@
             padding-right: 20px;
             padding-left: 20px;
         }
+
+        .pr_gr a{
+            color: #000;
+        }
+        .pr_gr a:link, a:visited, a:hover, a:active{
+            color: #000;
+        }
         
         .pr_content{
             line-height: 90px;
@@ -135,7 +242,7 @@
                 font-size: 48px;
                 font-family: "font-bold";
         }
-        .pr_box a:link, a:visited, a:hover, a:active {
+        .pr_box a:link, a:visited, a:hover, a:active{
             color: #000;
             text-decoration: underline; 
         }
@@ -155,7 +262,7 @@
             z-index: 10;
         }
 
-        ul{
+        .navi ul{
             padding-top: 16px;
             padding-bottom: 16px;
             background-color: #000;
@@ -171,6 +278,10 @@
         li a{
             color: #fff;
             font-family: "font-medium";
+        }
+
+        .navi a:link, a:visited, a:hover, a:active{
+            color: #fff;
         }
 
         .top{
@@ -219,7 +330,19 @@
             font-family: "font-bold";
             font-size: 64px;
         }
+        #japaneseMS .my-parts {
+            display: inline-block;
+            transform: skewX(-35deg);
+            background: #fff;
+            opacity: 0.7;
+            width: 70%;
+            height: 70%;
+        }
 
+        #japaneseMS .my-parts span {
+            display: inline-block;
+            transform: skewX(35deg);
+        }
         #japaneseMS{
             background-image: url(images/bgms_img.png);
             background-size: cover;
@@ -233,25 +356,27 @@
 
         #japaneseMS p{
             color: #000;
+            width: 100%;
         }
 
-        #aboutSGT{
+        #aboutSuperGT{
             background-image: url(gr_machines.png);
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center bottom;
         }
 
-        #aboutSGT .my-parts{
+        #aboutSuperGT .my-parts{
             transform: skewX(-20deg);
+            width: 80%;
         }
 
-        #aboutSGT .my-parts span{
+        #aboutSuperGT .my-parts span{
             transform: skewX(20deg);
         }
 
-        #aboutSGT p{
-            width: 70%;
+        #aboutSuperGT p{
+            width: 100%;
         }
 
         #attraction{
@@ -394,7 +519,7 @@
         h4{
             font-size: 48px;
             font-family: "font-bold";
-            -webkit-text-stroke: 0.8px #000;
+            /* -webkit-text-stroke: 0.8px #000; */
         }
 
         p{
@@ -469,7 +594,6 @@
             font-size: 30px;
             color: #000;
             font-family: "font-bold";
-            -webkit-text-stroke: 0.8px #000;
         }
 
         .contents img{
@@ -513,6 +637,11 @@
         #topic .my-parts{
             background: #000;
             color: #fff;
+            width: 40%;
+        }
+
+        #topic h3{
+            margin-left: 20%;
         }
 
         .contents img{
@@ -617,7 +746,7 @@
         }
 
         @media all and (max-width:480px) {
-            header{
+            .navi{
                 display: none;
             }
             .For_PC{
@@ -627,6 +756,9 @@
                 display: block;
             }
 
+            .header{
+                display: block;
+            }
             .top h1{
                 padding: 0;
                 padding-left: 5%;
@@ -685,30 +817,30 @@
                 -webkit-text-stroke: 1px #FFF;
             }
 
-            #aboutSGT{
+            #aboutSuperGT{
                 background-image: url(images/mobile_2.png);
             }
-            #aboutSGT .my-parts{
+            #aboutSuperGT .my-parts{
                 transform: skewX(5deg);
                 width: 100%;
                 height: 100%;
                 margin-top: 10%;
                 margin-bottom: 10%;
             }
-            #aboutSGT .my-parts span{
+            #aboutSuperGT .my-parts span{
                 display: inline-block;
                 transform: skewX(-5deg);
                 padding-top: 50px;
                 padding-bottom: 50px;
             }
-            #aboutSGT h3{
+            #aboutSuperGT h3{
                 font-size: 36px;
                 padding: 0;
                 width: 90%;
                 margin: auto;
                 -webkit-text-stroke: 1px #FFF;
             }
-            #aboutSGT p{
+            #aboutSuperGT p{
                 width: 80%;
                 margin: 0;
                 padding: 0;
@@ -751,20 +883,22 @@
                 width: 80%;
                 height: 100%;
                 margin-top: 30%;
-                margin-bottom: 20%;
+                margin-bottom: 5%;
             }
             .cl_dif .my-parts span{
                 padding: 0;
                 display: inline-block;
                 transform: skewX(-5deg);
             }
-            .cl_dif h3{
+            .cl_dif .my-parts span h3{
                 font-size: 36px;
                 padding: 0;
+                padding-left: 10%;
                 width: 100%;
                 margin: auto;
                 -webkit-text-stroke: 1px #FFF;
-                line-height: 70px;
+                line-height: 60px;
+                height: 20%;
             }
             .cl_dif p{
                 margin: 0;
@@ -779,13 +913,12 @@
             .cl_dif .my-parts{
                 transform: skewX(5deg);
                 width: 80%;
-                height: 100%;
+                height: 50%;
             }
             .cl_dif .my-parts span{
                 display: inline-block;
                 transform: skewX(-5deg);
-                padding-top: 50px;
-                padding-bottom: 50px;
+                height: 20%vh;
             }
             .cl_dif .my-parts h3{
                 font-size: 40px;
@@ -857,10 +990,12 @@
             }
             #fun h3{
                 margin: 0;
-                -webkit-text-stroke: 2px #000;
+                color: #000;
+                -webkit-text-stroke: 2px #fff;
                 width: 60%;
                 margin: auto;
                 font-size: 36px;
+                padding-left: 0;
             }
             #fun h5{
                 padding-top: 10px;
@@ -907,10 +1042,11 @@
 
             #media h5{
                 padding-top: 50px;
+                width: 90%;
+                text-align: center;
             }
 
             #media a{
-                padding-left: 10%;
                 margin: auto;
             }
             #media p{
@@ -931,13 +1067,14 @@
                 -webkit-text-stroke: 2px #fff;
                 margin: 0;
                 padding: 0;
+                padding-bottom: 14%;
                 padding-left: 10%;
                 font-size: 36px;
             }
             #more .my-parts{
                 transform: skewX(5deg);
-                width: 90%;
-                height: 30%;
+                width: 80%;
+                height: 40%;
             }
             #more .my-parts span{
                 display: inline-block;
@@ -967,6 +1104,7 @@
                 -webkit-text-stroke: 2px #fff;
                 padding-left: 30%;
                 font-size: 36px;
+                margin-left: 10%;
             }
             #topic h5{
                 font-size: 36px;
@@ -992,5 +1130,66 @@
                 font-size: 18px;
                 line-height: 40px;
                 text-align: left;
+            }
+
+            .m_title{
+                font-size: 36px;
+                padding: 10px;
+                margin: 0;
+            }
+            .m_p{
+                font-size: 24px;
+                line-height: 40px;
+            }
+            .r_box{
+                padding: 0;
+                width: 95%;
+                margin: auto;
+                margin-bottom: 20px;
+            }
+            .m_h3{
+                font-size: 36px;
+                padding: 20px 10px;
+                margin: 0;
+            }
+
+            .w_box{
+                padding: 0;
+                width: 95%;
+                margin: auto;
+                height: auto;
+            }
+            .w_contents .m_p{
+                padding: 10px 10px;
+            }
+
+            .m_p{
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+
+            .pr_box{
+                width: 95%;
+                margin: auto;
+            }
+            .pr_gr a{
+                font-size: 30px;
+            }
+            .pr_content{
+                padding: 0;
+                padding-top: 20px;
+                line-height: 40px;
+                font-size: 24px;
+            }
+
+            .big_p{
+                font-size: 40px;
+                font-family: "font-bold";
+            }
+
+            .attrac_content{
+                padding: 0 10px;
+                font-size: 24px;
+                line-height: 45px;
             }
         }
