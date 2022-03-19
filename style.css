@@ -141,7 +141,7 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            width: 80%;
+            width: 95%;
             height: 300px;
             background-color: #fff;
             border-radius: 5px;
@@ -337,6 +337,7 @@
             opacity: 0.7;
             width: 70%;
             height: 70%;
+            margin-bottom: 5%;
         }
 
         #japaneseMS .my-parts span {
@@ -352,11 +353,14 @@
 
         #japaneseMS h3{
             color: #000;
+            padding-left: 45%;
+            padding-top: 10%;
         }
 
         #japaneseMS p{
             color: #000;
             width: 100%;
+            padding-bottom: 10%;
         }
 
         #aboutSuperGT{
@@ -369,6 +373,7 @@
         #aboutSuperGT .my-parts{
             transform: skewX(-20deg);
             width: 80%;
+            margin-bottom: 5%;
         }
 
         #aboutSuperGT .my-parts span{
@@ -378,7 +383,9 @@
         #aboutSuperGT p{
             width: 100%;
         }
-
+        #aboutSuperGT h3{
+            padding-top: 10%;
+        }
         #attraction{
             background-image: url(images/attraction_img.JPG);
             background-size: cover;
@@ -417,11 +424,20 @@
 
         #gt500 p{
             color: #fff;
-            -webkit-text-stroke: 0.8px #000;
+            background: rgba(255,255,255,0.5);
+            width: 90%;
+            margin: auto;
+            /* -webkit-text-stroke: 0.8px #000; */
         }
         #gt500 h4{
             color: #fff;
-            -webkit-text-stroke: 0.8px #000;
+            background: rgba(255,255,255,0.5);
+            width: 90%;
+            margin: auto;
+            padding: 0;
+            padding-top: 30px;
+            margin-top: 50px;
+            /* -webkit-text-stroke: 0.8px #000; */
         }
 
         #gt300{
@@ -431,12 +447,21 @@
         }
         #gt300 h4{
             color: #fff;
-            padding-top: 50px;
-            -webkit-text-stroke: 0.8px #000;
+            background: rgba(255,255,255,0.5);
+            width: 90%;
+            margin: auto;
+            padding: 0;
+            padding-top: 30px;
+            margin-top: 50px;
+            /* -webkit-text-stroke: 0.8px #000; */
         }
         #gt300 p{
             color: #fff;
-            -webkit-text-stroke: 0.8px #000;
+            background: rgba(255,255,255,0.5);
+            width: 90%;
+            margin: auto;
+            padding-bottom: 30px;            
+            /* -webkit-text-stroke: 0.8px #000; */
         }
 
         .bg_group{
@@ -526,19 +551,21 @@
             font-size: 32px;
             line-height: 70px;
             font-family: "font-medium";
-            -webkit-text-stroke: 0.8px #000;
+            /* -webkit-text-stroke: 0.8px #000; */
         }
 
         .cl_dif h4{
             padding-top: 150px;
             text-align: center;
-            -webkit-text-stroke: 0.8px #000;
+            /* -webkit-text-stroke: 0.8px #000; */
+            text-shadow: 2px 3px 3px #000000;
         }
 
         .cl_dif p{
             text-align: center;
             padding-top: 50px;
-            -webkit-text-stroke: 0.8px #000;
+            /* -webkit-text-stroke: 0.8px #000; */
+            text-shadow: 2px 3px 3px #000000;
         }
 
         .cl_dif .my-parts{
@@ -602,9 +629,10 @@
 
         #fun .my-parts{
             transform: skewX(-35deg);
-            background: #000;
+            background: rgb(150, 150, 150);
             width: 50%;
             height: 50%;
+            opacity: 1;
         }
         #fun .my-parts span{
             color: #fff;
@@ -614,30 +642,51 @@
             padding-bottom: 50px;
         }
 
+        #fun h3{
+            color: #000;
+            -webkit-text-stroke: 2px #fff;
+        }
+
+        #media h3{
+            color: #000;
+            -webkit-text-stroke: 2px #fff;
+        }
+
         #media h5{
             color: #000;
             text-decoration:underline;
             -webkit-text-stroke: 0.8px #000;
+            -webkit-text-stroke: 2px #fff;
         }
         #media a:link,#media a:visited,#media a:hover,#media a:active {
             color: #000;
         }
         #media .my-parts{
-            background: #000;
+            background: rgb(150, 150, 150);
             color: #fff;
+            opacity: 1;
         }
 
+        #more h3{
+            color: #000;
+            -webkit-text-stroke: 2px #fff;
+        }
         #more .my-parts{
-            background: #000;
+            background: rgb(150, 150, 150);
             color: #fff;
             width: 50%;
             height: 40%;
+            opacity: 1;
         }
-
+        #topic h3{
+            color: #000;
+            -webkit-text-stroke: 2px #fff;
+        }
         #topic .my-parts{
-            background: #000;
+            background: rgb(150, 150, 150);
             color: #fff;
             width: 40%;
+            opacity: 1;
         }
 
         #topic h3{
@@ -647,14 +696,7 @@
         .contents img{
             padding: 80px;
         }
-        #more{
-            /* display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: center;
-            height: 50%;
-            padding-top: 10px; */
-        }
+
         .more_tile{
             display: flex;
             flex-wrap: wrap;
@@ -681,9 +723,6 @@
         }
 
         .button-close {
-            /* top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%); */
             width: 200px;
             padding: 10px;
             margin: 30px;
@@ -725,8 +764,10 @@
             background-color: rgba(255,255,255,0.2);
         }
         .message p{
-            text-align: center;
+            text-align: left;
             -webkit-text-stroke: 0.8px #000;
+            margin-left: 5%;
+            margin-right: 5%;
         }
 
         .copyright p{
@@ -734,7 +775,7 @@
             text-align: center;
         }
 
-        .h1_box_l {
+        .anim_box_l {
             opacity: 0;
             transform: translateX(-60px);
             transition: 1s ease;
@@ -797,7 +838,6 @@
                 margin: auto;
                 width: 90%;
                 padding: 0;
-                -webkit-text-stroke: 1px #FFF;
                 font-size: 36px;
             }
             .br-sp{
@@ -814,7 +854,6 @@
                 padding: 0;
                 font-size: 24px;
                 line-height: 45px;
-                -webkit-text-stroke: 1px #FFF;
             }
 
             #aboutSuperGT{
@@ -838,7 +877,6 @@
                 padding: 0;
                 width: 90%;
                 margin: auto;
-                -webkit-text-stroke: 1px #FFF;
             }
             #aboutSuperGT p{
                 width: 80%;
@@ -848,7 +886,6 @@
                 margin: auto;
                 font-size:24px;
                 line-height: 45px;
-                -webkit-text-stroke: 1px #FFF;
             }
             #attraction{
                 height: 50vh;
@@ -872,7 +909,6 @@
                 padding: 0;
                 width: 100%;
                 margin: auto;
-                -webkit-text-stroke: 1px #FFF;
             }
 
             #gt500{
@@ -896,7 +932,6 @@
                 padding-left: 10%;
                 width: 100%;
                 margin: auto;
-                -webkit-text-stroke: 1px #FFF;
                 line-height: 60px;
                 height: 20%;
             }
@@ -907,7 +942,6 @@
                 margin: auto;
                 font-size: 24px;
                 line-height: 45px;
-                -webkit-text-stroke: 1px #FFF;
             }
 
             .cl_dif .my-parts{
@@ -925,7 +959,6 @@
                 padding: 0;
                 width: 100%;
                 margin: auto;
-                -webkit-text-stroke: 1px #FFF;
                 line-height: 70px;
             }
             .cl_dif p{
@@ -935,11 +968,13 @@
                 margin: auto;
                 font-size: 24px;
                 line-height: 45px;
-                -webkit-text-stroke: 1px #FFF;
                 padding-bottom: 30px;
             }
             .cl_dif h4{
                 padding-top: 0px;
+                padding-left: 10px;
+                padding-right: 10px;
+                font-size: 36px;
             }
 
             .content_box{
@@ -976,7 +1011,6 @@
             }
             #fun .my-parts{
                 transform: skewX(10deg);
-                background: #000;
                 width: 100%;
                 height: 100%;
                 margin: 20% 0;
@@ -994,7 +1028,8 @@
                 -webkit-text-stroke: 2px #fff;
                 width: 60%;
                 margin: auto;
-                font-size: 36px;
+                font-size: 40px;
+                line-height: 55px;
                 padding-left: 0;
             }
             #fun h5{
@@ -1022,7 +1057,6 @@
             }
 
             #media .my-parts{
-                background: #000;
                 transform: skewX(5deg);
                 width: 90%;
                 height: 100%;
@@ -1036,8 +1070,9 @@
             #media h3{
                 color: #000;
                 -webkit-text-stroke: 2px #fff;
-                padding-left: 10%;
-                font-size: 36px;
+                padding-left: 20%;
+                font-size: 40px;
+                line-height: 55px;
             }
 
             #media h5{
@@ -1048,6 +1083,7 @@
 
             #media a{
                 margin: auto;
+                font-family: "font-bold";
             }
             #media p{
                 font-size: 24px;
@@ -1067,14 +1103,16 @@
                 -webkit-text-stroke: 2px #fff;
                 margin: 0;
                 padding: 0;
-                padding-bottom: 14%;
-                padding-left: 10%;
-                font-size: 36px;
+                padding-bottom: 10%;
+                font-size: 40px;
+                line-height: 55px;
+                padding-left: 5%;
             }
             #more .my-parts{
                 transform: skewX(5deg);
-                width: 80%;
+                width: 90%;
                 height: 40%;
+                margin-left: 8%;
             }
             #more .my-parts span{
                 display: inline-block;
@@ -1096,15 +1134,14 @@
             #topic .my-parts span{
                 display: inline-block;
                 transform: skewX(-5deg);
-                padding-top: 20px;
-                padding-bottom: 20px;
+                padding: 0;
             }
             #topic h3{
                 color: #000;
                 -webkit-text-stroke: 2px #fff;
-                padding-left: 30%;
-                font-size: 36px;
-                margin-left: 10%;
+                font-size: 40px;
+                line-height: 55px;
+                margin-left: 5%;
             }
             #topic h5{
                 font-size: 36px;
@@ -1114,7 +1151,7 @@
             }
             #topic p{
                 font-size: 24px;
-                line-height: 50px;
+                line-height: 40px;
                 width: 90%;
                 margin: auto;
             }
@@ -1158,14 +1195,17 @@
                 width: 95%;
                 margin: auto;
                 height: auto;
+                margin: 5%;
             }
             .w_contents .m_p{
                 padding: 10px 10px;
+                margin-bottom: 5%;
             }
 
             .m_p{
                 padding-left: 20px;
                 padding-right: 20px;
+                line-height: 35px;
             }
 
             .pr_box{
